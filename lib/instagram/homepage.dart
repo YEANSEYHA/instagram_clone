@@ -10,9 +10,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: _buildAppBar(),
-      body: SingleChildScrollView(
-        child: _buildStoryView(),
-      ),
+      // body: SingleChildScrollView(
+      //   child: _buildStoryView(),
+      // ),
+      body: _buildColumn(),
       bottomNavigationBar: Text("Customn navigation here!!"),
     );
   }
@@ -44,8 +45,84 @@ class HomePage extends StatelessWidget {
   Widget _buildColumn() {
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [Text("Custom main instagram body here")],
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[_buildStoryView(), _singleInstagramPost()],
+      ),
+    );
+  }
+
+  Widget _singleInstagramPost() {
+    return Container(
+      height: 620,
+      child: ListView(
+        children: [
+          Container(
+              height: 600,
+              width: 100,
+              color: Color.fromARGB(255, 8, 177, 203),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 60,
+                          child: Image.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Text('Eden Hazard')
+                      ],
+                    ),
+                  )
+                ],
+              )),
+          Container(
+              height: 300,
+              width: 100,
+              color: Color.fromARGB(255, 8, 177, 203),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 60,
+                          child: Image.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Text('Eden Hazard')
+                      ],
+                    ),
+                  )
+                ],
+              )),
+          Container(
+              height: 300,
+              width: 100,
+              color: Color.fromARGB(255, 8, 177, 203),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 60,
+                          child: Image.network(
+                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Text('Eden Hazard')
+                      ],
+                    ),
+                  )
+                ],
+              )),
+        ],
       ),
     );
   }
