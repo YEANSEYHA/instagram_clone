@@ -59,7 +59,54 @@ class HomePage extends StatelessWidget {
           Container(
               height: 600,
               width: 100,
-              color: Color.fromARGB(255, 8, 177, 203),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                            child: Row(
+                          children: <Widget>[
+                            Container(
+                                height: 50,
+                                child: CircleAvatar(
+                                  radius: 48,
+                                  backgroundImage: NetworkImage(
+                                      'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
+                                )),
+                            Container(
+                                height: 70,
+                                child: Center(
+                                  child: Text(
+                                    'stellar_bright888',
+                                    textAlign: TextAlign.center,
+                                  ),
+                                )),
+                            Spacer(
+                              flex: 2,
+                            ),
+                            Container(
+                                height: 70, child: Center(child: Text('...'))),
+                          ],
+                        )),
+                        Container(
+                          height: 400,
+                          child: Image.network(
+                            'https://i.guim.co.uk/img/media/eb6caf6db81be662905ee1230f1eddc6a9831624/0_206_5472_3283/master/5472.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=0f2236596712182911c4fef6b47c55e2',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          child: Text('Third  Row'),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              )),
+          Container(
+              height: 300,
+              width: 100,
               child: Column(
                 children: <Widget>[
                   Expanded(
@@ -81,29 +128,6 @@ class HomePage extends StatelessWidget {
           Container(
               height: 300,
               width: 100,
-              color: Color.fromARGB(255, 8, 177, 203),
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              height: 300,
-              width: 100,
-              color: Color.fromARGB(255, 8, 177, 203),
               child: Column(
                 children: <Widget>[
                   Expanded(
@@ -135,17 +159,17 @@ class HomePage extends StatelessWidget {
         children: [
           Container(
               width: 100,
-              color: Colors.amber[600],
               child: Column(
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
-                            fit: BoxFit.cover,
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
                           ),
                         ),
                         Text('Eden Hazard')
@@ -156,80 +180,17 @@ class HomePage extends StatelessWidget {
               )),
           Container(
               width: 100,
-              color: Colors.amber[600],
               child: Column(
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://resources.premierleague.com/premierleague/photo/2023/01/18/ec0fa1bf-06f9-469b-ad97-b594284eaf03/GettyImages-1456584000.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Text('Kai Havartz')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              color: Colors.amber[600],
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/sco/thumb/c/cc/Chelsea_FC.svg/2048px-Chelsea_FC.svg.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Text('UserN')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              color: Colors.amber[600],
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://img.chelseafc.com//image/upload/f_auto,w_1440,c_fill,g_faces,q_90/The%205th%20Stand%20app%20editorial/Players%20stock/Joao%20Felix/Signing%20day%20BTS/FmMh5kdWAAMBNCK.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Text('UserN')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              color: Colors.amber[600],
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/4/46/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg',
-                            fit: BoxFit.cover,
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/91/26/54/360_F_191265417_DMXnuD1ERvjYuKTbZMAEmsZ9kzRJARyD.webp'),
                           ),
                         ),
                         Text('Eden Hazard')
@@ -240,20 +201,20 @@ class HomePage extends StatelessWidget {
               )),
           Container(
               width: 100,
-              color: Colors.amber[600],
               child: Column(
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://resources.premierleague.com/premierleague/photo/2023/01/18/ec0fa1bf-06f9-469b-ad97-b594284eaf03/GettyImages-1456584000.jpg',
-                            fit: BoxFit.cover,
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
                           ),
                         ),
-                        Text('Kai Havartz')
+                        Text('Eden Hazard')
                       ],
                     ),
                   )
@@ -261,20 +222,20 @@ class HomePage extends StatelessWidget {
               )),
           Container(
               width: 100,
-              color: Colors.amber[600],
               child: Column(
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/sco/thumb/c/cc/Chelsea_FC.svg/2048px-Chelsea_FC.svg.png',
-                            fit: BoxFit.cover,
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/91/26/54/360_F_191265417_DMXnuD1ERvjYuKTbZMAEmsZ9kzRJARyD.webp'),
                           ),
                         ),
-                        Text('UserN')
+                        Text('Fernado Torres')
                       ],
                     ),
                   )
@@ -282,20 +243,41 @@ class HomePage extends StatelessWidget {
               )),
           Container(
               width: 100,
-              color: Colors.amber[600],
               child: Column(
                 children: <Widget>[
                   Expanded(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 60,
-                          child: Image.network(
-                            'https://img.chelseafc.com//image/upload/f_auto,w_1440,c_fill,g_faces,q_90/The%205th%20Stand%20app%20editorial/Players%20stock/Joao%20Felix/Signing%20day%20BTS/FmMh5kdWAAMBNCK.jpg',
-                            fit: BoxFit.cover,
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
                           ),
                         ),
-                        Text('UserN')
+                        Text('Eden Hazard')
+                      ],
+                    ),
+                  )
+                ],
+              )),
+          Container(
+              width: 100,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 80,
+                          child: CircleAvatar(
+                            radius: 48,
+                            backgroundImage: NetworkImage(
+                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
+                          ),
+                        ),
+                        Text('Eden Hazard')
                       ],
                     ),
                   )
