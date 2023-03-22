@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:instagram_clone/constants/instagram_list_constant.dart';
+import 'package:instagram_clone/constants/story_list_constant.dart';
 import 'package:instagram_clone/models/post_model.dart';
+import 'package:instagram_clone/models/story_model.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
@@ -123,9 +125,31 @@ class HomePage extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                // Task Todo
+                // Change Profile and find the right icons
                 Container(
-                  child: Text('Third  Row'),
-                ),
+                    child: Row(
+                  children: <Widget>[
+                    Container(
+                        height: 50,
+                        child: CircleAvatar(
+                          radius: 48,
+                          backgroundImage: NetworkImage(item.image),
+                        )),
+                    Container(
+                        height: 70,
+                        child: Center(
+                          child: Text(
+                            item.name,
+                            textAlign: TextAlign.center,
+                          ),
+                        )),
+                    Spacer(
+                      flex: 2,
+                    ),
+                    Container(height: 70, child: Center(child: Text('...'))),
+                  ],
+                )),
               ],
             ),
           )
@@ -134,139 +158,38 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget _buildSingleStory(StoryModel item) {
+    return Container(
+        child: Column(
+      children: <Widget>[
+        Expanded(
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 80,
+                child: CircleAvatar(
+                  radius: 48,
+                  backgroundImage: NetworkImage(item.image),
+                ),
+              ),
+              Text(item.name)
+            ],
+          ),
+        )
+      ],
+    ));
+  }
+
   Widget _buildStoryView() {
     return Container(
       height: 100,
-      child: ListView(
+      child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        children: [
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/91/26/54/360_F_191265417_DMXnuD1ERvjYuKTbZMAEmsZ9kzRJARyD.webp'),
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/91/26/54/360_F_191265417_DMXnuD1ERvjYuKTbZMAEmsZ9kzRJARyD.webp'),
-                          ),
-                        ),
-                        Text('Fernado Torres')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-          Container(
-              width: 100,
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 80,
-                          child: CircleAvatar(
-                            radius: 48,
-                            backgroundImage: NetworkImage(
-                                'https://t3.ftcdn.net/jpg/01/66/39/54/360_F_166395402_UcbaS5Z5Tj1rEbMvzhHR1U7DpCgCWd3r.jpg'),
-                          ),
-                        ),
-                        Text('Eden Hazard')
-                      ],
-                    ),
-                  )
-                ],
-              )),
-        ],
+        shrinkWrap: true,
+        itemCount: storyList.length,
+        itemBuilder: (context, index) {
+          return _buildSingleStory(storyList[index]);
+        },
       ),
     );
   }
