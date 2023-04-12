@@ -89,37 +89,37 @@ class HomePage extends StatelessWidget {
     PostModel item,
   ) {
     return Container(
-      height: 600,
+      height: 450,
       child: Column(
         children: <Widget>[
           Expanded(
             child: Column(
               children: <Widget>[
+                // Container(
+                //     child: Row(
+                //   children: <Widget>[
+                //     Container(
+                //         height: 50,
+                //         child: CircleAvatar(
+                //           radius: 48,
+                //           backgroundImage: NetworkImage(item.image),
+                //         )),
+                //     Container(
+                //         height: 70,
+                //         child: Center(
+                //           child: Text(
+                //             item.name,
+                //             textAlign: TextAlign.center,
+                //           ),
+                //         )),
+                //     Spacer(
+                //       flex: 2,
+                //     ),
+                //     Container(height: 70, child: Center(child: Text('...'))),
+                //   ],
+                // )),
                 Container(
-                    child: Row(
-                  children: <Widget>[
-                    Container(
-                        height: 50,
-                        child: CircleAvatar(
-                          radius: 48,
-                          backgroundImage: NetworkImage(item.image),
-                        )),
-                    Container(
-                        height: 70,
-                        child: Center(
-                          child: Text(
-                            item.name,
-                            textAlign: TextAlign.center,
-                          ),
-                        )),
-                    Spacer(
-                      flex: 2,
-                    ),
-                    Container(height: 70, child: Center(child: Text('...'))),
-                  ],
-                )),
-                Container(
-                  height: 400,
+                  height: 380,
                   child: Image.network(
                     item.image,
                     fit: BoxFit.cover,
