@@ -18,30 +18,30 @@ class HomePage extends StatelessWidget {
       //   child: _buildStoryView(),
       // ),
       body: SafeArea(child: _buildColumn()),
-      bottomNavigationBar: _buildBottom,
+      // bottomNavigationBar: _buildBottom,
     );
   }
 
-  Widget get _buildBottom {
-    return SafeArea(
-      child: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.home)),
-            IconButton(
-                onPressed: () {},
-                icon: FaIcon(FontAwesomeIcons.magnifyingGlass)),
-            IconButton(
-                onPressed: () {}, icon: FaIcon(FontAwesomeIcons.squarePlus)),
-            IconButton(
-                onPressed: () {}, icon: FaIcon(FontAwesomeIcons.clapperboard)),
-            IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.user)),
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget get _buildBottom {
+  //   return SafeArea(
+  //     child: BottomAppBar(
+  //       child: Row(
+  //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //         children: [
+  //           IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.home)),
+  //           IconButton(
+  //               onPressed: () {},
+  //               icon: FaIcon(FontAwesomeIcons.magnifyingGlass)),
+  //           IconButton(
+  //               onPressed: () {}, icon: FaIcon(FontAwesomeIcons.squarePlus)),
+  //           IconButton(
+  //               onPressed: () {}, icon: FaIcon(FontAwesomeIcons.clapperboard)),
+  //           IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.user)),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 
   AppBar _buildAppBar() {
     return AppBar(
