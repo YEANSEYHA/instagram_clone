@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:instagram_clone/constants/instagram_list_constant.dart';
 import 'package:instagram_clone/constants/story_list_constant.dart';
 import 'package:instagram_clone/models/post_model.dart';
 import 'package:instagram_clone/models/story_model.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -89,44 +89,12 @@ class HomePage extends StatelessWidget {
     PostModel item,
   ) {
     return Container(
-      height: 450,
+      height: 520,
       child: Column(
         children: <Widget>[
           Expanded(
             child: Column(
               children: <Widget>[
-                // Container(
-                //     child: Row(
-                //   children: <Widget>[
-                //     Container(
-                //         height: 50,
-                //         child: CircleAvatar(
-                //           radius: 48,
-                //           backgroundImage: NetworkImage(item.image),
-                //         )),
-                //     Container(
-                //         height: 70,
-                //         child: Center(
-                //           child: Text(
-                //             item.name,
-                //             textAlign: TextAlign.center,
-                //           ),
-                //         )),
-                //     Spacer(
-                //       flex: 2,
-                //     ),
-                //     Container(height: 70, child: Center(child: Text('...'))),
-                //   ],
-                // )),
-                Container(
-                  height: 380,
-                  child: Image.network(
-                    item.image,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                // Task Todo
-                // Change Profile and find the right icons
                 Container(
                     child: Row(
                   children: <Widget>[
@@ -148,6 +116,31 @@ class HomePage extends StatelessWidget {
                       flex: 2,
                     ),
                     Container(height: 70, child: Center(child: Text('...'))),
+                  ],
+                )),
+                Container(
+                  height: 380,
+                  child: Image.network(
+                    item.image,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                // Task Todo
+                // Change Profile and find the right icons
+                Container(
+                    child: Row(
+                  children: <Widget>[
+                    Container(
+                        height: 50, child: FaIcon(FontAwesomeIcons.heart)),
+                    Container(
+                        height: 50, child: FaIcon(FontAwesomeIcons.comment)),
+                    Container(
+                        height: 50, child: FaIcon(FontAwesomeIcons.paperPlane)),
+                    Spacer(
+                      flex: 2,
+                    ),
+                    Container(
+                        height: 50, child: FaIcon(FontAwesomeIcons.bookmark))
                   ],
                 )),
               ],
