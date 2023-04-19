@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_clone/instagram/pages/switch_tabs.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -47,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Column(children: <Widget>[
         _buildProfileDetail(),
         _buildProfileButtons(),
-        // _buildSwitchTabs()
+        SwitchTabs()
       ]),
     );
   }
