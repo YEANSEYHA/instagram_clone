@@ -28,9 +28,15 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.home)),
-            IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.person)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz)),
+            IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.home)),
+            IconButton(
+                onPressed: () {},
+                icon: FaIcon(FontAwesomeIcons.magnifyingGlass)),
+            IconButton(
+                onPressed: () {}, icon: FaIcon(FontAwesomeIcons.squarePlus)),
+            IconButton(
+                onPressed: () {}, icon: FaIcon(FontAwesomeIcons.clapperboard)),
+            IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.user)),
           ],
         ),
       ),
@@ -47,16 +53,15 @@ class HomePage extends StatelessWidget {
       ),
       centerTitle: true,
       backgroundColor: Colors.white,
-      leading: Icon(CupertinoIcons.photo_camera, color: Colors.black),
       actions: [
         IconButton(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.tv_circle),
+            icon: FaIcon(FontAwesomeIcons.heart),
             color: Colors.black),
         IconButton(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.arrow_up_right_circle_fill,
-                color: Colors.black))
+            icon: FaIcon(FontAwesomeIcons.paperPlane),
+            color: Colors.black)
       ],
     );
   }
@@ -89,7 +94,7 @@ class HomePage extends StatelessWidget {
     PostModel item,
   ) {
     return Container(
-      height: 520,
+      height: 495,
       child: Column(
         children: <Widget>[
           Expanded(
@@ -115,7 +120,10 @@ class HomePage extends StatelessWidget {
                     Spacer(
                       flex: 2,
                     ),
-                    Container(height: 70, child: Center(child: Text('...'))),
+                    Container(
+                        height: 70,
+                        child:
+                            Center(child: FaIcon(FontAwesomeIcons.ellipsis))),
                   ],
                 )),
                 Container(
@@ -128,21 +136,20 @@ class HomePage extends StatelessWidget {
                 // Task Todo
                 // Change Profile and find the right icons
                 Container(
+                    padding: const EdgeInsets.all(10),
                     child: Row(
-                  children: <Widget>[
-                    Container(
-                        height: 50, child: FaIcon(FontAwesomeIcons.heart)),
-                    Container(
-                        height: 50, child: FaIcon(FontAwesomeIcons.comment)),
-                    Container(
-                        height: 50, child: FaIcon(FontAwesomeIcons.paperPlane)),
-                    Spacer(
-                      flex: 2,
-                    ),
-                    Container(
-                        height: 50, child: FaIcon(FontAwesomeIcons.bookmark))
-                  ],
-                )),
+                      children: <Widget>[
+                        Container(child: FaIcon(FontAwesomeIcons.heart)),
+                        Spacer(),
+                        Container(child: FaIcon(FontAwesomeIcons.comment)),
+                        Spacer(),
+                        Container(child: FaIcon(FontAwesomeIcons.paperPlane)),
+                        Spacer(
+                          flex: 6,
+                        ),
+                        Container(child: FaIcon(FontAwesomeIcons.bookmark)),
+                      ],
+                    )),
               ],
             ),
           )
