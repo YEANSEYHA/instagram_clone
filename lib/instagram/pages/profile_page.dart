@@ -32,12 +32,229 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.white,
       actions: [
         IconButton(
-            onPressed: () {},
-            icon: FaIcon(FontAwesomeIcons.heart),
+            onPressed: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    height: 500,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Container(
+                            child: Text("Create"),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.clapperboard),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Reel")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.tableCells),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Post")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.circle),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Story")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.circle),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Story Highlight")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.signal),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Live")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.bookOpen),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Guide")
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            icon: FaIcon(FontAwesomeIcons.squarePlus),
             color: Colors.black),
         IconButton(
-            onPressed: () {},
-            icon: FaIcon(FontAwesomeIcons.paperPlane),
+            onPressed: () {
+              showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    height: 500,
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.gear),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Settings and privacy")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.clock),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Your activity")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.boxArchive),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Archive")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.qrcode),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("QR code")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.bookBookmark),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Saved")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.creditCard),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Orders and payments")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.bars),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Close friends")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.star),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Favourites")
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            child: Row(
+                              children: <Widget>[
+                                FaIcon(FontAwesomeIcons.message),
+                                SizedBox(
+                                  width: 40,
+                                ),
+                                Text("Update messaging")
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            icon: FaIcon(FontAwesomeIcons.bars),
             color: Colors.black)
       ],
     );
