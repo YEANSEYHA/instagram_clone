@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_clone/instagram/pages/edit_profile.dart';
+import 'package:instagram_clone/instagram/pages/share_profile.dart';
 import 'package:instagram_clone/instagram/pages/switch_tabs.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -317,7 +319,10 @@ class _ProfilePageState extends State<ProfilePage> {
             child: TextButton(
               style: TextButton.styleFrom(
                   primary: Colors.black, backgroundColor: Colors.grey),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => EditProfile()));
+              },
               child: Text('Edit profile'),
             ),
           ),
@@ -327,7 +332,10 @@ class _ProfilePageState extends State<ProfilePage> {
             child: TextButton(
               style: TextButton.styleFrom(
                   primary: Colors.black, backgroundColor: Colors.grey),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ShareProfile()));
+              },
               child: Text('Share profile'),
             ),
           ),
