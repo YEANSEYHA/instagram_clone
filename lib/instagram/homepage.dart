@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:instagram_clone/constants/instagram_list_constant.dart';
 import 'package:instagram_clone/constants/story_list_constant.dart';
+import 'package:instagram_clone/instagram/pages/messages.dart';
 import 'package:instagram_clone/models/post_model.dart';
 import 'package:instagram_clone/models/story_model.dart';
 
@@ -13,7 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: _buildAppBar(),
+      appBar: _buildAppBar(context),
       // body: SingleChildScrollView(
       //   child: _buildStoryView(),
       // ),
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
   //   );
   // }
 
-  AppBar _buildAppBar() {
+  AppBar _buildAppBar(context) {
     return AppBar(
       title: Text(
         'Instagram',
@@ -59,7 +60,10 @@ class HomePage extends StatelessWidget {
             icon: FaIcon(FontAwesomeIcons.heart),
             color: Colors.black),
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Messages()));
+            },
             icon: FaIcon(FontAwesomeIcons.paperPlane),
             color: Colors.black)
       ],

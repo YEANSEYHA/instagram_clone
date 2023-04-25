@@ -146,27 +146,6 @@ class SwitchTabs extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Container(
-                        color: Colors.teal[100],
-                        child: Image.network(
-                          "https://static.independent.co.uk/2021/05/29/22/newFile.jpg",
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        color: Colors.teal[100],
-                        child: Image.network(
-                          "https://i.dailymail.co.uk/i/pix/2017/05/31/14/40A0058900000578-0-image-a-186_1496238102575.jpg",
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        color: Colors.teal[100],
-                        child: Image.network(
-                          "https://a.espncdn.com/photo/2021/0709/r878390_864x1296_2-3.jpg",
-                          fit: BoxFit.cover,
-                        ),
-                      ),
                     ],
                   ),
                 ),
