@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:instagram_clone/instagram/homepage.dart';
 import 'package:instagram_clone/instagram/pages/add_post_page.dart';
 import 'package:instagram_clone/instagram/pages/profile_page.dart';
