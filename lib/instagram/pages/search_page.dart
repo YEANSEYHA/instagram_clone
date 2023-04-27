@@ -48,7 +48,7 @@ class _SearchPageState extends State<SearchPage> {
             style: TextStyle(color: Colors.black),
             decoration: InputDecoration(
               filled: true,
-              fillColor: Color(0xff30236),
+              fillColor: Colors.white,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                   borderSide: BorderSide.none),
@@ -62,11 +62,8 @@ class _SearchPageState extends State<SearchPage> {
         Expanded(
           child: Container(
             child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 200,
-                    childAspectRatio: 3 / 2,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
                 itemCount: display_list.length,
                 itemBuilder: (BuildContext ctx, index) {
                   return Container(
