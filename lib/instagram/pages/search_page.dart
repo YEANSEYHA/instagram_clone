@@ -52,7 +52,7 @@ class _SearchPageState extends State<SearchPage> {
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8.0),
                   borderSide: BorderSide.none),
-              hintText: "eg: The Dark Knight",
+              hintText: "Search",
               prefixIcon: Icon(Icons.search),
               prefixIconColor: Colors.purple.shade900,
             )),
@@ -70,11 +70,11 @@ class _SearchPageState extends State<SearchPage> {
                 itemCount: display_list.length,
                 itemBuilder: (BuildContext ctx, index) {
                   return Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Text(display_list[index].name),
+                    color: Colors.teal[100],
+                    child: Image.network(
+                      display_list[index].image,
+                      fit: BoxFit.cover,
+                    ),
                   );
                 }),
           ),

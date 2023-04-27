@@ -56,7 +56,7 @@ class _MultiMainPageState extends State<MultiMainPage> {
         BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.squarePlus), label: "Msg"),
         BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.clapperboard), label: "Posts"),
+            icon: FaIcon(FontAwesomeIcons.clapperboard), label: "Reels"),
         BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.user), label: "Profile"),
       ],

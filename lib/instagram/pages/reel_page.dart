@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:instagram_clone/instagram/pages/Reel/reel_page_view.dart';
 
 class ReelPage extends StatefulWidget {
   const ReelPage({super.key});
@@ -11,8 +11,9 @@ class ReelPage extends StatefulWidget {
 class _ReelPageState extends State<ReelPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Reel Page"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ReelPageView(),
     );
   }
 }
