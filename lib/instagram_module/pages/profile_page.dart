@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:instagram_clone/instagram/pages/edit_profile.dart';
-import 'package:instagram_clone/instagram/pages/share_profile.dart';
-import 'package:instagram_clone/instagram/pages/switch_tabs.dart';
+import 'package:instagram_clone/instagram_module/pages/edit_profile.dart';
+import 'package:instagram_clone/instagram_module/pages/share_profile.dart';
+import 'package:instagram_clone/instagram_module/pages/switch_tabs.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

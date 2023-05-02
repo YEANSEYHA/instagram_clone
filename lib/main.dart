@@ -1,7 +1,7 @@
-import 'package:instagram_clone/instagram/instagram_app.dart';
+import 'package:instagram_clone/instagram_module/apps/instagram_app.dart';
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/instagram/multi_main_page.dart';
+import 'package:instagram_clone/instagram_module/apps/multi_main_page.dart';
 
 void main() {
-  runApp(InstagramApp());
+  runApp(instagramWithProvider());
 }

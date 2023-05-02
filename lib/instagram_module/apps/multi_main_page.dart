@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/instagram/homepage.dart';
-import 'package:instagram_clone/instagram/pages/add_post_page.dart';
-import 'package:instagram_clone/instagram/pages/profile_page.dart';
-import 'package:instagram_clone/instagram/pages/reel_page.dart';
-import 'package:instagram_clone/instagram/pages/search_page.dart';
+import 'package:instagram_clone/instagram_module/apps/homepage.dart';
+import 'package:instagram_clone/instagram_module/pages/add_post_page.dart';
+import 'package:instagram_clone/instagram_module/pages/profile_page.dart';
+import 'package:instagram_clone/instagram_module/pages/reel_page.dart';
+import 'package:instagram_clone/instagram_module/pages/search_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MultiMainPage extends StatefulWidget {
@@ -27,9 +27,9 @@ class _MultiMainPageState extends State<MultiMainPage> {
       index: _currentIndex,
       children: [
         HomePage(),
-        SearchPage(),
+        // SearchPage(),
         AddPostPage(),
-        ReelPage(),
+        // ReelPage(),
         ProfilePage()
       ],
     );
